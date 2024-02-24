@@ -1,0 +1,21 @@
+# DataSource 설정
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://{DB호스트명}:{DB포트}/{DB명}
+    username: {DB 계정명}
+    password: {DB 비밀번호}
+
+#MyBatis 설정
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+# 트랜젝션 로깅 설정
+logging:
+  level:
+    org:
+      springframework:
+        jdbc: debug
+        transaction:
+          interceptor: trace
